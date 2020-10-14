@@ -12,6 +12,8 @@ type GoogleGeocodingReponse = {
   status: "OK" | "ZERO_RESULTS";
 };
 
+declare var google: any;
+
 const searchAdressHandler = (e: Event) => {
   e.preventDefault();
   const enteredAdress = adressInput.value;
@@ -44,7 +46,6 @@ const searchAdressHandler = (e: Event) => {
     });
 
   console.log("SUBMITED", enteredAdress);
-  //send this to google api
 };
 
 form.addEventListener("submit", searchAdressHandler);

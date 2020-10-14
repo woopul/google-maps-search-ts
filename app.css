@@ -5,15 +5,67 @@ html {
 #map {
   width: 70%;
   height: 25rem;
-  border: 1px solid #ccc;
   margin: 2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #e2e2e28c;
+  box-shadow: 6px 5px 11px 0px #00000047;
+}
+
+.map-info-container p{
+  color: #000000;
+  font-size: 1rem;
+}
+
+.map-info-container i{
+  position: relative;
+  color: black;
+  font-size: 4rem;
+  animation: bounceIn 2100ms ease-in-out 200ms infinite alternate both;
 }
 
 form {
   text-align: center;
   margin: 2rem auto;
+}
+
+@keyframes bounceIn {
+
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
 }
